@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio  |  Alfito Febriansyah</title>
+    <link rel="icon" href="images/favicon.png ">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="images/logo.png" class='logo'></a>
+            <div class="toggle" onclick="ToggleMenu();"></div>
+            <ul class='navigation'>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Bobba<br>It's <span> KOKUMI コクミ</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, numquam ullam enim autem architecto, nobis pariatur quas quos mollitia dignissimos cum ratione! Corrupti ipsum voluptatem quas, soluta cumque ratione enim?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/rainbow miring.png" class='kokumi'>
+            </div>
+        </div>
+        <ul class='thumb'>
+            <li><img src="images/rainbow mini.png" onclick="imgSlider('images/rainbow miring.png');changeCircleColor('#9b9acb');changeTextboxColor('#9b9acb');changeKokumiColor('#9b9acb')"></li>
+            <li><img src="images/cheese mini.png" onclick="imgSlider('images/cheese miring.png');changeCircleColor('#ff9821');changeTextboxColor('#ff9821');changeKokumiColor('#ff9821')"></li>
+            <li><img src="images/88rising mini.png" onclick="imgSlider('images/88rising miring.png');changeCircleColor('#f5b96f');changeTextboxColor('#f5b96f');changeKokumiColor('#f5b96f')"></li>
+            <li><img src="images/boba mini.png" onclick="imgSlider('images/boba miring.png');changeCircleColor('#e0d8c2');changeTextboxColor('#e0d8c2');changeKokumiColor('#e0d8c2')"></li>
+        </ul>
+        <ul class='sci'>
+            <li><a href="#"><img src="images/facebook.png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.kokumi').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;  
+        }
+
+        function changeTextboxColor(color){
+            const Textbox = document.querySelector('.content .textBox a');
+            Textbox.style.background = color;  
+        }
+
+        function changeKokumiColor(color){
+            const Kokumi = document.querySelector('.content .textBox h2 span');
+            Kokumi.style.color = color;  
+        }
+
+        function ToggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+
+        }
+    </script>
+
+    <div id='copyright'>
+       <div class='wrapper'>
+           &copy; 2018. <b>Kokumi World</b> All Right Reserved.
+       </div>
+    </div>
+
+
+</body>
+</html>
